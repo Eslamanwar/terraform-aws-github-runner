@@ -55,10 +55,6 @@ resource "aws_launch_template" "runner" {
 
   instance_initiated_shutdown_behavior = "terminate"
 
-  instance_market_options {
-    market_type = var.market_options
-  }
-
   image_id      = data.aws_ami.runner.id
   instance_type = var.instance_type
 
